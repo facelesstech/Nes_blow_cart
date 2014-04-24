@@ -1,0 +1,52 @@
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Tue 18 Mar 2014 21:28:48 GMT
+
+BeginCmp
+TimeStamp = /531E2CCF;
+Reference = BT1;
+ValeurCmp = BATTERY;
+IdModule  = CR2032_holder;
+EndCmp
+
+BeginCmp
+TimeStamp = /53165070;
+Reference = IC1;
+ValeurCmp = ATTINY85-P;
+IdModule  = DIP-8_Sockets;
+EndCmp
+
+BeginCmp
+TimeStamp = /531F7EA1;
+Reference = P1;
+ValeurCmp = PIN_BREAKOUT;
+IdModule  = 6_PIN_BREAKOUT;
+EndCmp
+
+BeginCmp
+TimeStamp = /531E3529;
+Reference = R1;
+ValeurCmp = 100;
+IdModule  = R3-5;
+EndCmp
+
+BeginCmp
+TimeStamp = /531E34DB;
+Reference = S1;
+ValeurCmp = SOUND_SENSOR;
+IdModule  = Sound_sensor;
+EndCmp
+
+BeginCmp
+TimeStamp = /531E2CF0;
+Reference = SP1;
+ValeurCmp = SPEAKER;
+IdModule  = Piezo_buzz_TH;
+EndCmp
+
+BeginCmp
+TimeStamp = /531E2C9B;
+Reference = SW1;
+ValeurCmp = SWITCH_INV;
+IdModule  = MICROSWITCH_SPST;
+EndCmp
+
+EndListe

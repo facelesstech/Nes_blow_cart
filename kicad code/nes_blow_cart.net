@@ -1,0 +1,54 @@
+# EESchema Netlist Version 1.1 created  Tue 18 Mar 2014 21:28:48 GMT
+(
+ ( /531E2CCF CR2032_holder BT1 BATTERY
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /53165070 DIP-8_Sockets IC1 ATTINY85-P
+  ( 1 N-000007 )
+  ( 2 ? )
+  ( 3 ? )
+  ( 4 GND )
+  ( 5 N-000003 )
+  ( 6 N-000011 )
+  ( 7 N-000004 )
+  ( 8 N-000005 )
+ )
+ ( /531F7EA1 6_PIN_BREAKOUT P1 PIN_BREAKOUT
+  ( 1 N-000005 )
+  ( 2 GND )
+  ( 3 N-000004 )
+  ( 4 N-000011 )
+  ( 5 N-000003 )
+  ( 6 N-000007 )
+ )
+ ( /531E3529 R3-5 R1 100
+  ( 1 GND )
+  ( 2 N-000006 )
+ )
+ ( /531E34DB Sound_sensor S1 SOUND_SENSOR
+  ( 1 N-000005 )
+  ( 2 GND )
+  ( 3 N-000004 )
+ )
+ ( /531E2CF0 Piezo_buzz_TH SP1 SPEAKER
+  ( 1 N-000011 )
+  ( 2 N-000006 )
+ )
+ ( /531E2C9B MICROSWITCH_SPST SW1 SWITCH_INV
+  ( 1 VCC )
+  ( 2 N-000005 )
+  ( 3 ? )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
