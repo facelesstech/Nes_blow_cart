@@ -1,13 +1,13 @@
 #include <rtttl.h>
 
-int threshold = 30;
-int volume;
-int pinSpeaker = 1;
-int blow_count;
-const int octave = 0;
+int threshold = 30;  // Sound sensor threshold - lower for more sensative higher for less
+int volume;  // Readings from sound sensor
+int pinSpeaker = 1;  // Speaker pin 1
+const int octave = 0;  // The octave set for the player
 
-int song_pickersong_picker = 0;
+int song_picker;  // Where the random song picker number is stored
 
+//  --------------------- TFFFI Songs --------------------- 
 const char song_1[] PROGMEM =
 "smwwd1:d=4,o=5,b=125:a,8f.,16c,16d,16f,16p,f,16d,16c,16p,16f,16p,16f,16p,8c6,8a.,g";
 const char song_2[] PROGMEM =
@@ -36,136 +36,75 @@ const char song_13[] PROGMEM =
 "ZeldaDung:d=4,o=5,b=80:16g,16a#,16d6,16d#6,16g,16a#,16d6,16d#6,16g,16a#,16d6,16d#6,16g,16a#,16d6,16d#6,16f#,16a,16d6,16d#6,16f#,16a,16d6,16d#6,16f#,16a,16d6,16d#6,16f#,16a,16d6,16d#6";
 
 
-Rtttl player;
+Rtttl player;  // Song player
 
 void setup() {
-  player.begin(pinSpeaker);  
-  pinMode(pinSpeaker, OUTPUT);
-  randomSeed(666);  
+  player.begin(pinSpeaker);  // Starts the player
+  pinMode(pinSpeaker, OUTPUT);  // Speaker set as output
+  randomSeed(666);  // Random seed of the random picker
 }
 
-void playSong1()
+void playSong(const char * track)  // Takes the song_# pasted from the if statements below
 {
-  player.play_P(song_1, octave);
+  player.play_P(track, octave);  // Passes the song_# and octave to the player
 }
-
-void playSong2()
-{
-  player.play_P(song_2, octave);
-}
-
-void playSong3()
-{
-  player.play_P(song_3, octave);
-}
-
-void playSong4()
-{
-  player.play_P(song_4, octave);
-}
-
-void playSong5()
-{
-  player.play_P(song_5, octave);
-}
-
-void playSong6()
-{
-  player.play_P(song_6, octave);
-}
-
-void playSong7()
-{
-  player.play_P(song_7, octave);
-}
-
-void playSong8()
-{
-  player.play_P(song_8, octave);
-}
-
-void playSong9()
-{
-  player.play_P(song_9, octave);
-}
-
-void playSong10()
-{
-  player.play_P(song_10, octave);
-}
-
-void playSong11()
-{
-  player.play_P(song_11, octave);
-}
-
-void playSong12()
-{
-  player.play_P(song_12, octave);
-}
-
-void playSong13()
-{
-  player.play_P(song_13, octave);
-}
-
 
 void loop() {
   volume = analogRead(A1); // Reads the value from the Analog PIN A0
 
-  if(volume<=threshold){
-    int song_picker = random(14);
+  if(volume<=threshold){  // If the volume reading exceeds the threshold it will pick a random number from 1 - 14
+    song_picker = random(14);
 
-    if (song_picker == 1) {
-      playSong1();
+    if (song_picker == 1) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_1);
     }
 
-    if (song_picker == 2) {
-      playSong2();
+    if (song_picker == 2) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_2);
     }
 
-    if (song_picker == 3) {
-      playSong3();
+    if (song_picker == 3) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_3);
     }
 
-    if (song_picker == 4) {
-      playSong4();
+    if (song_picker == 4) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_4);
     }
 
-    if (song_picker == 5) {
-      playSong5();
+    if (song_picker == 5) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_5);
     }
 
-    if (song_picker == 6) {
-      playSong6();
+    if (song_picker == 6) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_6);
     }
 
-    if (song_picker == 7) {
-      playSong7();
+    if (song_picker == 7) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_7);
     }
 
-    if (song_picker == 8) {
-      playSong8();
+    if (song_picker == 8) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_8);
     }
     
-    if (song_picker == 9) {
-      playSong9();
+    if (song_picker == 9) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_9);
     }
     
-    if (song_picker == 10) {
-      playSong10();
+    if (song_picker == 10) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_10);
     }
     
-    if (song_picker == 11) {
-      playSong11();
+    if (song_picker == 11) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_11);
     }
     
-    if (song_picker == 12) {
-      playSong12();
+    if (song_picker == 12) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_12);
     }
     
-    if (song_picker == 13) {
-      playSong13();
+    if (song_picker == 13) {  // If the random number matches this one it will play this tune in the TFFFI player
+      playSong(song_13);
     }
   }
 }
